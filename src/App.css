@@ -1,0 +1,65 @@
+.App {
+  height: 100vh;
+}
+
+.TopSection {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; /* Align content to the top */
+  background: linear-gradient(to right, rgba(128, 0, 128, 1), rgba(128, 0, 128, 0));
+  padding: 20px;
+}
+
+.LogoAndName {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.LogoAndName img {
+  height: 40px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+.CelebrateMoments {
+  font-size: 32px;
+  align-self: flex-start; /* Align to the left */
+  justify-content: center;
+  align-items: center;
+  align-content: "center";
+}
+
+.BottomSection {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+  padding: 20px;
+}
+
+.JoinBeta {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.EmailInput {
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #61dafb;
+  margin-bottom: 10px;
+}
+
+.SubmitButton {
+  background-color: #61dafb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
