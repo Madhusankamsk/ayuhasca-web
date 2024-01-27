@@ -41,20 +41,22 @@ function App() {
       setLoading(true);
       setSuccessMessage('');
       setErrorMessage('');
-
+  
       // Check if the email is valid
       if (!isEmailValid(email)) {
         setErrorMessage('Please enter a valid email address.');
         return;
       }
-
+  
       // Check if the email already exists in the database
-      const emailExistsQuery = await getDocs(collection(database, 'emails'), where('email', '==', email));
-      if (!emailExistsQuery.empty) {
+      const querySnapshot = await getDocs(collection(database, 'emails'), where('email', '==', email));
+      const existingEmail = querySnapshot.docs.find((doc) => doc.data().email === email);
+  
+      if (existingEmail) {
         setErrorMessage('This email address is already registered.');
         return;
       }
-
+  
       // If the email is not already in the database, add it
       await addDoc(collection(database, 'emails'), {
         email: email,
@@ -69,6 +71,7 @@ function App() {
       setLoading(false);
     }
   };
+  
 
   return (
     <div className="App">
