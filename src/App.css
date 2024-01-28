@@ -1,40 +1,102 @@
 .App {
   height: 100vh;
+  overflow: hidden;
 }
 
 .TopSection {
-  height: 75%;
+  position: relative;
+  height: 65vh;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start; /* Align content to the top */
-  background: linear-gradient(to right, rgba(131, 78, 255, 1), rgba(0, 0, 0, 1));
-  padding: 20px;
-  border-bottom-left-radius:32px;
-  border-bottom-right-radius: 32px;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  min-height: 200px;
 }
 
+
+.HeroImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 65vh;
+  overflow: hidden;
+  z-index: -1;
+  border-bottom-right-radius: 32px;
+  border-bottom-left-radius: 32px;
+  min-height: 200px;
+
+
+}
+
+.HeroImage img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.GradientOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(80deg, rgba(131, 78, 255, 1) 50%, rgba(131, 78, 255, 0.5) 55%, rgba(131, 78, 255, 0) 60%, rgba(0, 0, 0, 0));
+  opacity: 1;
+  z-index: 0;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+
+}
+
+.GradientUnderlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #834EFF;
+  opacity: 1;
+  z-index: -2;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+
+}
+
+
+.ContentContainer {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+  padding: 20px;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
 .LogoAndName {
+  font-family: 'Comfortaa', sans-serif;
+  font-size:medium;
+  position: absolute;
+  top: 5vh;
+  left: 5vh;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .LogoAndName img {
-  height: 40px; /* Adjust as needed */
+  height: 40px;
   margin-right: 10px;
 }
 
 .CelebrateMoments {
-  font-size: 32px;
-  align-self: flex-start; /* Align to the left */
-  justify-content: center;
-  align-items: center;
-  align-content: "center";
+  font-size: 62px;
+  font-family: 'Comfortaa', sans-serif;
+  align-self: flex-start;
+  color: #ffffff;
 }
 
 .BottomSection {
-  height: 25%;
+  min-height: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +106,9 @@
 }
 
 .JoinBeta {
-  color: white;
+  color: #834EFF;
+  font-family: 'Comfortaa', sans-serif;
+
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -58,10 +122,78 @@
 }
 
 .SubmitButton {
-  background-color: #61dafb;
+  background-color: #834EFF;
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 50px;
   cursor: pointer;
+}
+
+.SuccessMessage {
+  color: green;
+  margin-top: 10px;
+}
+
+.ErrorMessage {
+  color: red;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+
+  .LogoAndName {
+    font-family: 'Comfortaa', sans-serif;
+    font-size:50px;
+    position: absolute;
+    top: 10%; /* Center vertically */
+    left: 30%; /* Center horizontally */
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+  }
+
+  .CelebrateMoments {
+    font-size: 70px;
+    position: absolute;
+    top: 80%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    text-align: center; /* Center the text within the element */
+    color: #ffffff;
+  }
+
+  .GradientOverlay {
+    background: linear-gradient(180deg, rgba(131, 78, 255, 1) 20%, rgba(131, 78, 255, 0.5) 30%, rgba(131, 78, 255, 0) 35%, rgba(0, 0, 0, 0));
+  }
+  
+
+}
+
+@media screen and (max-width: 426px) {
+  
+ .HeroImage{
+
+    width: 100%;
+    padding: 10px;
+    border-bottom-right-radius: 32px;
+     border-bottom-left-radius: 32px;
+  }
+
+
+  
+}
+
+
+@media screen and (max-width: 375px) {
+
+
+  .HeroImage{
+
+    width: 100%;
+    padding: 10px;
+    border-bottom-right-radius: 32px;
+     border-bottom-left-radius: 32px;
+  }
 }

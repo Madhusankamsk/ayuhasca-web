@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
+import header from './Header.svg';
+import mobileHeader from './MobileHeader.svg';
+
 import './App.css';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, addDoc, serverTimestamp, getDocs, where } from 'firebase/firestore';
@@ -77,22 +80,35 @@ function App() {
     <div className="App">
       {/* Top Section */}
       <div className="TopSection">
-        <div className="LogoAndName">
-          <img src={logo} className="App-logo" alt="logo" />
-          <span>Ayuhasca</span>
+        <div className="HeroImage">
+       <img
+            src={window.innerWidth >= 768 ? header : mobileHeader}
+            alt="Ayuhasca Hero"
+          />
         </div>
-        <div className="CelebrateMoments">Celebrate Moments!</div>
+        <div className="GradientOverlay" />
+        <div className="GradientUnderlay" />
+        <div className="ContentContainer">
+          <div className="LogoAndName">
+            <img src={logo} className="App-logo" alt="logo" />
+            <span>AYUHASCA</span>
+          </div>
+          <div className="CelebrateMoments">Celebrate Moments!</div>
+        </div>
       </div>
 
       {/* Bottom Section */}
       <div className="BottomSection">
-        <div className="JoinBeta">Join Beta</div>
+        <div className="JoinBeta">Join BETA.</div>
+        
+
         <input
           type="text"
           placeholder="Enter your email"
           className="EmailInput"
           value={email}
           onChange={handleInputChange}
+          
         />
         <button className="SubmitButton" onClick={handleFormSubmit} disabled={loading}>
           {loading ? 'Submitting...' : 'Submit'}
