@@ -108,6 +108,9 @@ function App() {
           className="EmailInput"
           value={email}
           onChange={handleInputChange}
+          style={{
+            borderColor: '#777777',
+          borderRadius:100}}
           
         />
         <button className="SubmitButton" onClick={handleFormSubmit} disabled={loading}>
