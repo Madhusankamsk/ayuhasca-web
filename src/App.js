@@ -82,7 +82,7 @@ function App() {
       <div className="TopSection">
         <div className="HeroImage">
        <img
-            src={window.innerWidth >= 750 ? header : mobileHeader}
+            src={window.innerWidth >= 500 ? header : mobileHeader}
             alt="Ayuhasca Hero"
           />
         </div>

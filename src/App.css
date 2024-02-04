@@ -193,6 +193,16 @@
      border-bottom-left-radius: 32px;
   }
 
+  .LogoAndName {
+    font-family: 'Comfortaa', sans-serif;
+    font-size:50px;
+    position: absolute;
+    top: 10%; /* Center vertically */
+    left: 10%; /* Center horizontally */
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+  }
 
   
 }
