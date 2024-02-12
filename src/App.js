@@ -34,6 +34,7 @@ function App() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
+  
 
   const handleInputChange = (event) => {
     setEmail(event.target.value);
