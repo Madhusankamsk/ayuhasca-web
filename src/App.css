@@ -140,23 +140,23 @@
   margin-top: 10px;
 }
 
+
+
 @media screen and (max-width: 768px) {
 
-  .HeroImage{
- 
-    width: "auto";
+  .HeroImage {
+    width: auto;
     border-bottom-right-radius: 32px;
-     border-bottom-left-radius: 32px;
+    border-bottom-left-radius: 32px;
   }
- 
-
 
   .LogoAndName {
     font-family: 'Comfortaa', sans-serif;
-    font-size:50px;
+    font-size: 50px;
     position: absolute;
     top: 10%; /* Center vertically */
-    left: 30%; /* Center horizontally */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
     display: flex;
     align-items: center;
     color: #ffffff;
@@ -175,13 +175,8 @@
   .GradientOverlay {
     background: linear-gradient(180deg, rgba(131, 78, 255, 1) 20%, rgba(131, 78, 255, 0.5) 30%, rgba(131, 78, 255, 0) 35%, rgba(0, 0, 0, 0));
   }
-  
-
 }
 
-
-
-  
   
 @media screen and (max-width: 426px) {
   
@@ -193,17 +188,7 @@
      border-bottom-left-radius: 32px;
   }
 
-  .LogoAndName {
-    font-family: 'Comfortaa', sans-serif;
-    font-size:50px;
-    position: absolute;
-    top: 10%; /* Center vertically */
-    left: 10%; /* Center horizontally */
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-  }
-
+ 
   
 }
 
